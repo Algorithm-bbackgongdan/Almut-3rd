@@ -20,32 +20,21 @@ function bucketIsInEdge(arr) {
 
   let maxNum = Number.MIN_SAFE_INTEGER;
 
+  const secondLine = bees.slice(0, bees.length - 1);
+  const secondSum = secondLine.reduce((acc, cur) => acc + cur);
+
   // select bee
   for (let i = 0; i < bees.length - 1; i++) {
-    let firstLineSum = 0;
+    let sum = 0;
     const firstBee = bees[i];
     const firstLine = bees.slice(0, i);
     if (firstLine.length !== 0)
-      firstLineSum += firstLine.reduce((acc, cur) => acc + cur);
-    // console.log("firstLine", firstLine);
+      sum += firstLine.reduce((acc, cur) => acc + cur);
 
-    // select another bee
-    for (let j = i + 1; j < bees.length; j++) {
-      let sum = 0;
-      sum += firstLineSum;
-
-      const secondLine = bees.slice(0, j);
-      // console.log("secondLine:", secondLine);
-      if (secondLine.length !== 0)
-        sum += bees.slice(0, j).reduce((acc, cur) => acc + cur);
-
-      sum -= firstBee;
-      sum += bucketEdge * 2;
-      // console.log("sum:", sum);
-      maxNum = Math.max(maxNum, sum);
-    }
-    // console.log("bucketEdge:", bucketEdge);
-    // console.log("\n\n");
+    sum += secondSum;
+    sum -= firstBee;
+    sum += bucketEdge * 2;
+    maxNum = Math.max(maxNum, sum);
   }
 
   return maxNum;
