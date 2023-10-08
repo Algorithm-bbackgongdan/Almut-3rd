@@ -96,8 +96,6 @@
 
 *문제 출제자 및 총무를 위한 멤버 번호 입니다.*
 
-~~김승우(1) → 정대헌(2) → 강진실(3) → 윤성호(4) → 조종현(5) → 김현재(6) → 최현수(7) → 전시원(8)~~
-
 김승우(1) → 강진실(2) → 윤성호(3) → 조종현(4) → 김현재(5) → 최현수(6) → 전시원(7)
 
 ## 코드 리뷰 예시
@@ -120,3 +118,38 @@ code
 			 ㄴ prog_12345.py // 프로그래머스 문제
        ㄴ README.md     // 1주차 README
 ```
+
+
+# 멤버 별 제출 현황
+
+- 총무가 PR 기준으로 월요일마다 업데이트 해주세요!
+- ✅ : 미션 성공
+- 😥 : 미션 실패 (지각, 미제출, 미흡)
+
+| 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
+| ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| [seungwookim99](https://github.com/seungwooKim99) |       |       |       |       |       |       |       |       |
+| [kauthenticity](https://github.com/kauthenticity) |       |       |       |       |       |       |       |       |
+| [SungHo-Ck](https://github.com/SungHo-Ck)         |       |       |       |       |       |       |       |       |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) |       |       |       |       |       |       |       |       |
+| [itsnowkim](https://github.com/itsnowkim)         |       |       |       |       |       |       |       |       |
+| [itsme-shawn](https://github.com/itsme-shawn)     |       |       |       |       |       |       |       |       |
+| [siwonblue](https://github.com/siwonblue)         |       |       |       |       |       |       |       |       |
+
+# 커리큘럼
+
+- 총무가 월요일마다 업데이트 해주세요!
+
+## Week 1
+
+- 총무 : [seungwookim99](https://github.com/seungwooKim99)
+
+### 1. 그리디
+- 문제정보 : 꿀 따기 (21758)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/21758
+
+### 2. 구현
+- 문제정보 : 로봇 시뮬레이션 (2174)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/2174
