@@ -20,7 +20,7 @@ function solution() {
   negative = [...negative].reverse();
 
   // except
-  if (positive.length === 0) return `${negative[0]} ${negative[1]}`;
+  if (positive.length === 0) return `${negative[1]} ${negative[0]}`;
   if (negative.length === 0) return `${positive[0]} ${positive[1]}`;
 
   // two pointer search
