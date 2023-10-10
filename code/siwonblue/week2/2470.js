@@ -38,6 +38,15 @@ function solution() {
     if (Math.abs(negative[nP]) > Math.abs(positive[pP])) pP += 1;
     else nP += 1;
   }
+
+  // except : if answer is in only positive case
+  if (positive.length >= 2 && blending > Math.abs(positive[0] + positive[1]))
+    return `${positive[0]} ${positive[1]}`;
+
+  // except : if answer is in only negative case
+  if (negative.length >= 2 && blending > Math.abs(negative[0] + negative[1]))
+    return `${negative[1]} ${negative[0]}`;
+
   return ans.sort((a, b) => a - b).join(" ");
 }
 console.log(solution());
