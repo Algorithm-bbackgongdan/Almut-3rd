@@ -66,7 +66,8 @@ https://www.acmicpc.net/problem/2470
 
 # Problem & Solution
 
-- 음수 양수를 더하지 않고 양수끼리 또는 음수끼리에서 답이 찾아지는 경우가 존재하기 때문에 아래 경우 추가
+- 음수 양수를 더하지 않고 양수끼리 또는 음수끼리에서 답이 찾아지는 경우가 존재하기 때문에 아래 경우 추가  
+  [[feat] 2470 second : fail](https://github.com/Algorithm-bbackgongdan/Almut-3rd/commit/9685c56817d2c8e1833d6d461534ef20d1e7643c)
 
   ```ts
   // except : if answer is in only positive case
@@ -80,7 +81,8 @@ https://www.acmicpc.net/problem/2470
 
   > 2트 실패
 
-- 음수에 대해 예외처리할 때 오름차순이 아니었음.
+- 음수에 대해 예외처리할 때 오름차순이 아니었음.  
+  [[feat] 2470 third : done](https://github.com/Algorithm-bbackgongdan/Almut-3rd/commit/cfcd7c6e1e8dac0f9b1bf125fd6fcc36775d66c5)
 
   ```ts
   // bad
