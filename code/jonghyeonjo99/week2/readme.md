@@ -91,3 +91,72 @@ n과 m이 300 이하이기에 리스트를 순회하는 3중 반복문을 사용
 문제를 풀기위한 아이디어는 비교적 빠르게 생각하였지만 구현 과정에서 잘못된 변수를 설정하고, while문안에 리스트를 넣지않아 초기화과정이 생략되는 등 실수가 많았다.
 
 좀 더 문제를 꼼꼼하게 구현하도록 노력해야겠다.
+
+# 1234 : ABCD
+### code
+```python
+
+  ```
+## 결과
+
+## 접근
+
+## 문제 회고
+
+# prog_43163 : 단어변환
+### code
+```python
+from collections import deque
+
+def solution(begin, target, words):
+
+    answer = 0
+    words.append(begin)
+    
+    visited = [0 for _ in range(len(words))]
+    gragh = [[] for _ in range(len(words))]
+
+    if target not in words:
+        return 0
+
+    for i in range(len(words)):
+        word = words[i]
+        for j in range(len(words)):
+            diff = 0
+            for k in range(len(word)):
+                if word[k] != words[j][k]:
+                    diff += 1
+            if diff == 1:
+                gragh[i].append(j)
+    
+   
+    # begin
+    queue = deque([len(words) -1])
+    visited[len(words)-1] = 1
+
+    while queue:
+        num = queue.popleft()
+        if words[num] == target:
+            answer = visited[num]-1
+            break
+
+        for i in gragh[num]:
+            if visited[i] == 0:
+                visited[i] = visited[num] + 1
+                queue.append(i)
+                
+    return answer
+  ```
+## 결과
+### 실패 후 풀이 참조
+## 접근
+1. 한개의 알파벳만 다른 단어들 사이 연결 리스트를 만든다.
+2. begin부터 시작하여 target 단어까지 연결리스트 사이 최단 거리를 구한다.
+3. words안에 target 단어가 없거나, target까지 리스트가 연결되지 않을 경우 0 을 return
+## 문제 회고
+문제를 처음 봤을 때 DFS/BFS 문제로 느껴지지 않고 낯설게 느껴졌다.
+오랜 시간 고민해서 위의 접근을 생각하였지만, 구현에 실패하고 풀이를 참조하였다.
+
+## 참고문헌
+https://velog.io/@ledcost/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-43163-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%8B%A8%EC%96%B4-%EB%B3%80%ED%99%98-level-3-BFSDFS
+
