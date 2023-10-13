@@ -92,17 +92,45 @@ n과 m이 300 이하이기에 리스트를 순회하는 3중 반복문을 사용
 
 좀 더 문제를 꼼꼼하게 구현하도록 노력해야겠다.
 
-# 1234 : ABCD
+# boj_2470 : 두 용액
 ### code
 ```python
+from sys import stdin
 
+n = int(stdin.readline())
+solutions = list(map(int,stdin.readline().split()))
+
+solutions.sort()
+
+start = 0
+end = n - 1
+result = 100000000000
+
+while start < end:
+
+  temp = solutions[start] + solutions[end]
+
+  if abs(temp) < result:
+    result = abs(temp)
+    left = start
+    right = end
+  
+  if temp == 0:
+    break
+  elif temp > 0:
+    end -= 1
+  else:
+    start += 1
+
+print(solutions[left], solutions[right])
   ```
 ## 결과
-
+### 성공
 ## 접근
-
+1. 크기 순으로 용액을 정렬시킨다.
+2. 정렬된 용액 리스트의 양 끝에서부터 두 용액을 혼합하여 가장 0에 가까울 때 두 용액을 출력한다.
 ## 문제 회고
-
+알멋 스터디 1기에서 처음 보고 이 문제를 통해서 투포인터에 대한 개념을 공부했던 기억이 있어 수월하게 풀 수 있었다.
 # prog_43163 : 단어변환
 ### code
 ```python
