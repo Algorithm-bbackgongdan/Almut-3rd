@@ -10,6 +10,7 @@ const input = require("fs")
 const N = +input[0];
 const prices = [null];
 
+// get input
 for (let i = 1; i <= N; i++) {
   const price = {};
   const temp = input[i].split(" ").map(Number);
@@ -20,6 +21,11 @@ for (let i = 1; i <= N; i++) {
 }
 const colors = ["R", "G", "B"];
 
+/**
+ * memo fail
+ * find answer in next value (x)
+ * find answer in previous value (o)
+ */
 function BFS(initColor) {
   const memo = Array.from({ length: N + 1 }, () => Number.MAX_SAFE_INTEGER); // minimum price
   const queue = [];
