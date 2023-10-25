@@ -37,6 +37,9 @@ bool train(Me me, vector<vector<long long>> room_info){
 }
 
 int main(){
+  ios_base::sync_with_stdio(false);
+  cin.tie(0);
+
   // input
   long long N, attack;
   cin >> N >> attack;
@@ -48,27 +51,28 @@ int main(){
     room_info[i] = vector<long long>{type,a,b};
   };
 
-  long long maxHp = pow(10,7)  * 123456;
+  long long maxHp = 1e18;
 
+  Me me = {-1, -1, attack};
   long long start = 1;
   long long end = maxHp;
   long long ans = maxHp+1;
   while(start<=end){
     long long mid = (start+end)/2;
-     Me me = {mid, mid, attack};
-     
-     bool killDragon;
-     killDragon = train(me, room_info);
-    
-     if(killDragon){  
-      ans = min(ans, mid);
-      end = mid - 1;
-     }else{
-      start = mid + 1;
-     };
+    me.cur = mid;
+    me.max = mid;
+    bool killDragon;
+    killDragon = train(me, room_info);
+  
+    if(killDragon){  
+    ans = min(ans, mid);
+    end = mid - 1;
+    }else{
+    start = mid + 1;
+    };
   };
   
-  cout << ans;
+  cout << ans << "\n";
   
   return 0;
 }
