@@ -21,16 +21,23 @@ bool train(Me me, vector<vector<long long>> room_info){
       if(me.cur>=me.max) me.cur = me.max;
       continue;
     }
-    while(true){
-      room[2] -= me.attack;
-      if(room[2]<=0) break;
-      
-      me.cur -= room[1];
-      if(me.cur<=0){
-        killDragon = false;
-        return killDragon;
-      }
-    }
+    // timeout code
+    // while(true){
+    //   room[2] -= me.attack;
+    //   if(room[2]<=0) break;
+
+    //   me.cur -= room[1];
+    //   if(me.cur<=0){
+    //     killDragon = false;
+    //     return killDragon;
+    //   }
+    // }
+    // fix
+    long long t;
+    if(room[2] % me.attack == 0) t = room[2]/me.attack - 1;
+    else t = room[2]/me.attack;
+    me.cur -= room[1] * t;
+    if(me.cur <= 0) return false;
   }
   
   return killDragon;
