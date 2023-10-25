@@ -9,12 +9,12 @@ struct Me{
   long long attack;
 };
 
-bool train(Me me, vector<vector<int>> room_info){
+bool train(Me me, vector<vector<long long>> room_info){
   
   bool killDragon = true;
-  for(int i=0;i<room_info.size();i++){
-    vector<int> room = room_info[i];
-    int type = room[0];
+  for(long long i=0;i<room_info.size();i++){
+    vector<long long> room = room_info[i];
+    long long type = room[0];
     if(type==2){
       me.attack += room[1];
       me.cur += room[2];
@@ -38,17 +38,17 @@ bool train(Me me, vector<vector<int>> room_info){
 
 int main(){
   // input
-  int N, attack;
+  long long N, attack;
   cin >> N >> attack;
-  vector<vector<int>> room_info(N, vector<int>(3, 0));
+  vector<vector<long long>> room_info(N, vector<long long>(3, 0));
   
-  for(int i=0;i<N;i++){
-    int type, a,b;
+  for(long long i=0;i<N;i++){
+    long long type, a,b;
     cin >> type >> a >> b;
-    room_info[i] = vector<int>{type,a,b};
+    room_info[i] = vector<long long>{type,a,b};
   };
 
-  long long maxHp = pow(10,12)  * 123456;
+  long long maxHp = pow(10,7)  * 123456;
 
   long long start = 1;
   long long end = maxHp;
