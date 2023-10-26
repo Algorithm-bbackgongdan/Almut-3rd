@@ -55,13 +55,20 @@ int search(vector<int> stones, int high, int k){
   return ans;
 };
 
-int main(){
-  ios_base::sync_with_stdio(false);
-  cin.tie(0);
 
-  vector<int> stones = {2, 4, 5, 3, 2, 1, 4, 2, 5, 1};
-  auto max_stone = max_element(stones.begin(), stones.end());
-  int k = 3;
+/**
+* how to run in programmers
+* set function name : soltuion
+* set params : vector<int> stones, int k 
+* remove commented below 
+*/
+int main(){
+  ios_base::sync_with_stdio(false); // remove
+  cin.tie(0); // remove
+
+  vector<int> stones = {2, 4, 5, 3, 2, 1, 4, 2, 5, 1}; // remove
+  int k = 3; // remove
+  auto max_stone = max_element(stones.begin(), stones.end()); 
   cout << search(stones, *max_stone, k);
   return 0;
 };
