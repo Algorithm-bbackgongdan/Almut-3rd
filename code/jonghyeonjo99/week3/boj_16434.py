@@ -22,13 +22,15 @@ for i in range(len(dungeon)):
     attack += dungeon[i][1]
     result.append(dungeon[i][2])
 
-result.sort(reverse=True)
+result.sort()
 
 hp = 0
-for i in range(len(result)-1):
+for i in range(len(result)):
   hp += result[i]
 
-if hp >= 0:
-  print(-result[N-1] + 1)
+if hp > result[0]:
+  min_hp = -result[0] + 1
 else:
-  print(-result[N-1] + hp + 1) 
+  min_hp = -hp + 1
+
+print(min_hp)
