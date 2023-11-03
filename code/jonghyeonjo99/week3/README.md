@@ -1,13 +1,66 @@
 # boj_16434 : 드래곤 앤 던전
 ### code
 ```python
+N, H = map(int,input().split())
 
+dungeon = []
+
+for _ in range(N):
+  info = list(map(int,input().split()))
+  dungeon.append(info)
+
+left = 1
+right = N * 1000000000000
+answer = 0
+
+while (left <= right):
+  mid = (left + right) // 2
+  HP = mid
+  attack = H
+
+  for i in range(len(dungeon)):
+
+    if dungeon[i][0] == 1:
+      quotient = dungeon[i][2] // attack
+      rest = dungeon[i][2] % attack
+      if rest == 0:
+        HP -= dungeon[i][1] * (quotient-1)
+      else:
+        HP -=dungeon[i][1] * quotient
+      if HP <= 0:
+          break
+    
+    else:
+      attack += dungeon[i][1]
+      HP += dungeon[i][2]
+      if HP > mid:
+        HP = mid
+  
+  if HP > 0:
+    right = mid -1
+    answer = mid
+  else:
+    left = mid + 1
+
+print(answer)
   ```
 ## 결과
-
+### 성공
 ## 접근
+용을 쓰러트리기 위한 최소의 H maxHP를 이분탐색을 통해서 구하자.
+
+용사가 가질 수 있는 최대의 H maxHP는 최대 공격력, 최대 생명력인 몬스터를 N번 만났을 때이다.
+따라서 이분탐색의 right값을 문제에서 주어진 가장 큰값이 들어가는 "N * 10^12" 으로 설정
+
+용사가 몬스터를 쓰러트릴 때까지의 반복 과정을 수학식으로 해결
+
+던전을 돌고 남은 HP가 0보다 큰 가장 작은 수가 될 때 mid값 출력
 
 ## 문제 회고
+구현의 조건들을 빼먹어서 문제를 틀리는 실수를 몇번 하였다.
+구현 조건과 일어날 수 있는 상황을 좀 더 꼼꼼하게 생각해볼 필요가 있을 것 같다.
+
+이분탐색문제는 항상 구하고자 하는 값을 이분탐색의 mid값으로 생각하는 습관을 기르자..!!
 # boj_1149 : RGB거리
 ### code
 ```python
@@ -92,4 +145,4 @@ k범위 내에서 징검다리를 건너갈 수 있는 니니즈 친구들의 �
 어떤 값을 이분탐색을 통해 구해야하는지 생각해내지 못했다. 결국 디딤돌 사이 거리가 k보다 커질 때까지 반복문을 통한 구현을 했고 실패하였다.
 
 이후 질문하기를 통해 mid값 이하의 숫자를 가진 디딤돌의 개수를 통해 이분탐색을 할 수 있음을 알 수 있었다.
-이번 문제처럼 이분탐색을 통해 구해야하는 값이 숨겨져있는 경우 아이디어를 떠올리기 굉장히 어려운 것 같다. 
+이번 문제처럼 이분탐색을 통해 구해야하는 값이 숨겨져있는 경우(내생각..ㅎㅎ) 아이디어를 떠올리기 굉장히 어려운 것 같다. 

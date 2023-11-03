@@ -1,36 +1,42 @@
 N, H = map(int,input().split())
 
 dungeon = []
-result = []
 
 for _ in range(N):
   info = list(map(int,input().split()))
   dungeon.append(info)
 
-attack = H
-for i in range(len(dungeon)):
-  if dungeon[i][0] == 1:
-    quotient = dungeon[i][2] // attack
-    rest = dungeon[i][2] % attack
-    if rest == 0:
-      answer = (quotient - 1) * dungeon[i][1]
-      result.append(-answer)
+left = 1
+right = N * 1000000000000
+answer = 0
+
+while (left <= right):
+  mid = (left + right) // 2
+  HP = mid
+  attack = H
+
+  for i in range(len(dungeon)):
+
+    if dungeon[i][0] == 1:
+      quotient = dungeon[i][2] // attack
+      rest = dungeon[i][2] % attack
+      if rest == 0:
+        HP -= dungeon[i][1] * (quotient-1)
+      else:
+        HP -=dungeon[i][1] * quotient
+      if HP <= 0:
+          break
+    
     else:
-      answer = quotient * dungeon[i][1]
-      result.append(-answer)
+      attack += dungeon[i][1]
+      HP += dungeon[i][2]
+      if HP > mid:
+        HP = mid
+  
+  if HP > 0:
+    right = mid -1
+    answer = mid
   else:
-    attack += dungeon[i][1]
-    result.append(dungeon[i][2])
+    left = mid + 1
 
-result.sort()
-
-hp = 0
-for i in range(len(result)):
-  hp += result[i]
-
-if hp > result[0]:
-  min_hp = -result[0] + 1
-else:
-  min_hp = -hp + 1
-
-print(min_hp)
+print(answer)
