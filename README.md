@@ -119,13 +119,13 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [seungwookim99](https://github.com/seungwooKim99) | ✅    |       |       |       |       |       |       |       |
-| [kauthenticity](https://github.com/kauthenticity) | ✅    |       |       |       |       |       |       |       |
-| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    |       |       |       |       |       |       |       |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    |       |       |       |       |       |       |       |
-| [itsnowkim](https://github.com/itsnowkim)         | ✅    |       |       |       |       |       |       |       |
-| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    |       |       |       |       |       |       |       |
-| [siwonblue](https://github.com/siwonblue)         | ✅    |       |       |       |       |       |       |       |
+| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅   |       |       |       |       |       |       |
+| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅   |       |       |       |       |       |       |
+| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅   |       |       |       |       |       |       |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅   |       |       |       |       |       |       |
+| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅   |       |       |       |       |       |       |
+| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅   |       |       |       |       |       |       |
+| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅   |       |       |       |       |       |       |
 
 # 커리큘럼
 
@@ -168,3 +168,25 @@ code
 - 문제정보 : 단어 변환 (43163)
 - 출처 : 프로그래머스
 - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/43163
+
+## Week 3
+
+- 총무 : [SungHo-CK](https://github.com/SungHo-Ck)
+
+### 1. 이진탐색
+
+- 문제정보 : 드래곤 앤 던전 (16434)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/16434
+
+### 2. DP
+
+- 문제정보 : RGB거리 (1149)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/1149
+
+### 3. 프로그래머스
+
+- 문제정보 : 징검다리 건너기 (64062)
+- 출처 : 프로그래머스
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/64062
