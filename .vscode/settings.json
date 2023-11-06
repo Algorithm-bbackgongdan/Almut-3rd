@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.svg": "html",
+    "algorithm": "cpp",
+    "vector": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
+}
