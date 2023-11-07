@@ -54,16 +54,67 @@ print(max(results))
 ## 문제 회고
 전형적인 다익스트라 문제라 생각했고, 어렵지않게 풀 수 있었다.
 
-# 1234 : ABCD
+# 1504 : 특정한 최단 경로
 ### code
 ```python
+import sys
+import heapq
 
+n, e = map(int,sys.stdin.readline().rstrip().split())
+
+gragh = [[] for i in range(n+1)]
+distance = [1e9] * (n+1)
+
+for i in range(e):
+  a,b,c = map(int,sys.stdin.readline().rstrip().split())
+  gragh[a].append((b,c))
+  gragh[b].append((a,c))
+
+v1, v2 = map(int,sys.stdin.readline().rstrip().split())
+
+def dijkstra(start):
+  hq = []
+  heapq.heappush(hq, (0, start))
+  distance[start] = 0
+  while hq:
+    dist, now = heapq.heappop(hq)
+    if distance[now] < dist:
+      continue
+    for i in gragh[now]:
+      cost = dist + i[1]
+      if cost < distance[i[0]]:
+        distance[i[0]] = cost
+        heapq.heappush(hq, (cost, i[0]))
+
+dijkstra(1)
+start_v1 = distance[v1]
+start_v2 = distance[v2]
+
+distance = [1e9] * (n+1)
+dijkstra(v1)
+v1_v2 = distance[v2]
+v1_end = distance[n]
+
+distance = [1e9] * (n+1)
+dijkstra(v2)
+v2_end = distance[n]
+
+result = min(start_v1 + v1_v2 + v2_end, start_v2 + v1_v2 + v1_end)
+
+if result < 1e9:
+  print(result)
+else:
+  print(-1)
   ```
 ## 결과
-
+### 성공
 ## 접근
+시작점부터 반드시 지나가야하는 서로다른 두 정점까지의 최단 거리를 각각 구하고, 각 정점사이 최단거리, 두번째 지나는 정점부터 n번 정점까지의 최단거리를 각각 구해서
+더해준다.
 
+무조건 1 -> v1 -> v2 -> n 순서일 필요 없음. 1 -> v2 -> v1 -> n 이 더 짧은 경로가 될 수 있다.
 ## 문제 회고
+앞의 서강그라운드 문제와 결이 비슷하여 금방 풀 수 있었는데, 거리를 저장하는 list를 반복적으로 초기화해주는 코드가 깔끔하지않아 마음에 들지않는다.ㅜ
 
 # 1234 : ABCD
 ### code
