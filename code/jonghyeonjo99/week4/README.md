@@ -116,13 +116,81 @@ else:
 ## 문제 회고
 앞의 서강그라운드 문제와 결이 비슷하여 금방 풀 수 있었는데, 거리를 저장하는 list를 반복적으로 초기화해주는 코드가 깔끔하지않아 마음에 들지않는다.ㅜ
 
-# 1234 : ABCD
+# prog_92344 : 파괴되지 않은 건물
 ### code
 ```python
+#naive하게 짠 코드 (효율성 0점)
+def solution(board, skill):
+    answer = 0
+    for type, r1, c1, r2, c2, degree in skill:
+        if type == 1:
+            for j in range(r1,r2+1):
+                for k in range(c1,c2+1):
+                    board[j][k] -= degree
+        else:
+            for j in range(r1,r2+1):
+                for k in range(c1,c2+1):
+                    board[j][k] += degree
+    
+    for i in range(len(board)):
+        for j in range(len(board[1])):
+            if board[i][j] > 0:
+                answer += 1
+            
+    return answer
 
+    #imos 알고리즘 이용
+    def solution(board, skill):
+    answer = 0
+    imos = [[0 for _ in range(len(board[1]) + 1)] for _ in range(len(board) + 1)]
+
+    for type, r1, c1, r2, c2, degree in skill:
+        if type == 1:
+            imos[r1][c1] -= degree
+            imos[r2 + 1][c1] += degree
+            imos[r1][c2 + 1] += degree
+            imos[r2 + 1][c2 + 1] -= degree
+        else: #type == 2
+            imos[r1][c1] += degree
+            imos[r2 + 1][c1] -= degree
+            imos[r1][c2 + 1] -= degree
+            imos[r2 + 1][c2 + 1] += degree
+    
+    #누적합 두번
+    for i in range(len(board) + 1):
+        for j in range(1,len(board[1]) + 1):
+            imos[i][j] += imos[i][j-1]
+    
+    for j in range(len(board[1]) + 1):
+        for i in range(1,len(board) + 1):
+            imos[i][j] += imos[i-1][j]
+    
+    #board에 적용
+    for i in range(len(board)):
+        for j in range(len(board[1])):
+            board[i][j] += imos[i][j]
+            if board[i][j] > 0:
+                answer += 1
+            
+    return answer
   ```
 ## 결과
-
+### 실패(53.8점)후 참조
 ## 접근
+효율성은 생각하지 못하고 각각의 skill에서 board의 범위가 주어질 때마다 그 범위에 해당하는 곳에 degree만큼 연산처리를 해주었다.
+skill과 board의 최대 범위를 생각하면 최대 250,000 * 1,000,000 번의 계산이 필요하기 때문에 효율성이 매우 떨어졌다.
+
+그래서 누적합 알고리즘을 확장시킨 imos 알고리즘을 적용하여 시간복잡도를 줄일 수 있었다.
+1. board보다 행과 열이 1줄씩 많은 2차원리스트를 선언한다.
+2. 위에서 선언한 2차원 리스트에 skill의 결과를 저장하고자 한다.
+3. skill의 행 방향 범위와 열 방향 범위의 시작과 끝을 기록한다.
+4. 기록 할 때 시작은 공격이라면 -degree, 회복이라면 +degree를, 끝은 공격이라면 +degree, 회복이라면 -degree로 기록한다.
+5. 이후 행 방향, 열 방향으로 각각 한번씩 누적합을 구한다.
+6. board에 imos 리스트 결과를 더해 0보다 큰 즉, 파괴되지 않은 건물의 수를 구하여 return해준다.
 
 ## 문제 회고
+분명 배웠던 알고리즘인데, 문제를 보고 전혀 생각이 나질 않았다.
+어떤 알고리즘을 사용해야하는지 모르는 상황에서 적절한 알고리즘을 떠올리는 것이 실전에서 매우 중요하고, 그러기 위해서는 까먹지 않게 반복하는 것이 중요한 것같다...
+
+## 참고문헌
+[imos 알고리즘](https://driip.me/65d9b58c-bf02-44bf-8fba-54d394ed21e0)
