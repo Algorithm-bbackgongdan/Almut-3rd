@@ -8,6 +8,7 @@ cost = [list(map(int, read().split())) for _ in range(n)]
 R, G, B = 0, 1, 2
 dp = [[0] * 3 for _ in range(n)]
 
+
 dp[0] = cost[0]  # dp 초기값 설정
 
 for level in range(1, n):
