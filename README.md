@@ -216,19 +216,19 @@ code
 
 - 총무 : [itsnowkim](https://github.com/itsnowkim)
 
-### 1. 최단경로
+### 1. 랜덤 유형 백준
 
 - 문제정보 : 내 집 마련하기 (30619)
 - 출처 : 백준
 - 링크 : https://www.acmicpc.net/problem/30619
 
-### 2. 그래프이론
+### 2. 랜덤 유형 백준
 
 - 문제정보 : donstructive (30618)
 - 출처 : 백준
 - 링크 : https://www.acmicpc.net/problem/30618
 
-### 3. 프로그래머스
+### 3. 랜덤 유형 백준
 
 - 문제정보 : 보물섬 (2589)
 - 출처 : 백준
