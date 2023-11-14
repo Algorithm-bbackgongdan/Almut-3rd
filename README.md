@@ -119,13 +119,13 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅   |✅     |       |       |       |       |       |
-| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅   |✅     |       |       |       |       |       |
-| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅   |✅     |       |       |       |       |       |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅   |✅     |       |       |       |       |       |
-| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅   |✅     |       |       |       |       |       |
-| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅   |✅     |       |       |       |       |       |
-| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅   |✅     |       |       |       |       |       |
+| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅   |✅     |✅      |       |       |       |       |
+| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅   |✅     |✅      |       |       |       |       |
+| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅   |✅     |✅      |       |       |       |       |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅   |✅     |✅      |       |       |       |       |
+| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅   |✅     |✅      |       |       |       |       |
+| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅   |✅     |😥      |       |       |       |       |
+| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅   |✅     |✅      |       |       |       |       |
 # 커리큘럼
 
 - 총무가 월요일마다 업데이트 해주세요!
@@ -211,3 +211,25 @@ code
 - 문제정보 : 파괴되지 않은 건물 (92344)
 - 출처 : 프로그래머스
 - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/92344
+
+## Week 5
+
+- 총무 : [itsnowkim](https://github.com/itsnowkim)
+
+### 1. 랜덤 유형 백준
+
+- 문제정보 : 내 집 마련하기 (30619)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/30619
+
+### 2. 랜덤 유형 백준
+
+- 문제정보 : donstructive (30618)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/30618
+
+### 3. 랜덤 유형 백준
+
+- 문제정보 : 보물섬 (2589)
+- 출처 : 백준
+- 링크 : https://www.acmicpc.net/problem/2589
