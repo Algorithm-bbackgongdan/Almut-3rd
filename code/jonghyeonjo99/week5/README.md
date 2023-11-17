@@ -96,13 +96,72 @@ N = 6 일 때, 순열의 배치
 비교적 빠른 시간에 규칙을 찾았다. 하지만 코드로 구현하는 과정 중, 순열의 중앙값 이후 짝수를 배치하기 위해 인덱스와 값 사이의 연관성을 찾는 과정이 꽤 어려웠다.
 
 
-# 1234 : ABCD
+# 2589 : 보물섬
 ### code
 ```python
+import sys
+from collections import deque
+
+n, m = map(int, sys.stdin.readline().rstrip().split())
+
+treasure_map = []
+
+# N E S W
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
+
+#보물지도 그래프
+for i in range(n):
+  arr = []
+  words = (sys.stdin.readline().rstrip())
+
+  for word in words:
+    arr.append(word)
+  
+  treasure_map.append(arr)
+
+def BFS(treasure_map, x, y):
+  visited = [[0 for _ in range(m)] for _ in range(n)]
+  count = 0
+  queue = deque()
+  visited[x][y] = 1
+  queue.append((x,y))
+
+  while queue:
+    a, b = queue.popleft()
+  
+    for i in range(4):
+      nx = a + dx[i]
+      ny = b + dy[i]
+      if (nx < 0 or nx >= n or ny < 0 or ny >= m):
+        continue
+      elif(treasure_map[nx][ny] == 'L' and visited[nx][ny] == 0):
+        visited[nx][ny] = visited[a][b] + 1
+        count = max(count, visited[nx][ny])
+        queue.append((nx,ny))
+
+  return count-1
+
+result = 0
+for i in range(n):
+  for j in range(m):
+    if treasure_map[i][j] == 'L':
+      result = max(result, BFS(treasure_map,i,j))
+
+print(result)
+
 
   ```
 ## 결과
-
+### 실패 후 참조
 ## 접근
-
+1. 보물지도를 완전탐색하여 처음 육지를 탐색한 순간, BFS 함수를 실행한다.
+2. BFS 함수는 시작 육지 'L'과 다른 육지 'L'사이의 최대 이동시간을 저장한다.
+3. 그 후, result에 다른 위치에서 시작한 이동시간과 2번값을 비교하여 큰 값을 저장하고 출력한다.
 ## 문제 회고
+처음에는 최단거리가 가장 긴 노드사이의 거리를 구하기위해 깊이를 구하는 것으로 이해하고 DFS를 사용하였다.
+하지만 육지를 멀리 돌아가는 경우가 발생하였다. 이를 잡기 위해 counts 리스트를 만들고, 이동시간을 min함수를 이용해 저장해보는 등 많은 시도를 해보았지만 결국 멀리 돌아가는 경우를 잡지 못하였다.
+
+결국 구글 코드를 참조하였고, 2차원 리스트의 경우 넓이 우선 탐색(BFS)을 통해 최단거리를 구하면 멀리 돌아가는 경우를 잡을 수 있음을 깨달았다...
+
+문제 상황에 따른 DFS, BFS 적용을 좀 더 세심하게 공부할 필요가 있을 것같다.
