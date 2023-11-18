@@ -70,4 +70,4 @@
 - 출처 : 프로그래머스
 - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/92344
 
-- 고민 중
+- 답 보고 풀었고 imos 이용해서 풀었음

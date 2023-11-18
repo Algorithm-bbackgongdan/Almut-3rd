@@ -24,13 +24,10 @@ void operation(){
 void input(){
   cin >> N;
   houses.resize(N);
-  for(int i=0;i<N;i++)
-    cin >> houses[i];
+  for(int i=0;i<N;i++) cin >> houses[i];
   cin >> M;
   // O() : 2.7 * 10^7
-  for(int i=0;i<M;i++){
-    operation();
-  }
+  for(int i=0;i<M;i++) operation();
 }
 
 void solution(){
