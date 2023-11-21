@@ -119,13 +119,13 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅   |✅     |✅      |       |       |       |       |
-| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅   |✅     |✅      |       |       |       |       |
-| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅   |✅     |✅      |       |       |       |       |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅   |✅     |✅      |       |       |       |       |
-| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅   |✅     |✅      |       |       |       |       |
-| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅   |✅     |😥      |       |       |       |       |
-| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅   |✅     |✅      |       |       |       |       |
+| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅   |✅     |✅      |✅      |       |       |       |
+| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅   |✅     |✅      |😥      |       |       |       |
+| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅   |✅     |✅      |✅      |       |       |       |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅   |✅     |✅      |✅      |       |       |       |
+| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅   |✅     |✅      |✅      |       |       |       |
+| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅   |✅     |😥      |✅      |       |       |       |
+| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅   |✅     |✅      |✅      |       |       |       |
 # 커리큘럼
 
 - 총무가 월요일마다 업데이트 해주세요!
@@ -233,3 +233,25 @@ code
 - 문제정보 : 보물섬 (2589)
 - 출처 : 백준
 - 링크 : https://www.acmicpc.net/problem/2589
+
+## Week 6
+
+- 총무 : [itsme-shawn](https://github.com/itsme-shawn)
+
+### 1. 랜덤 유형
+
+- 문제정보 : 성격 유형 검사하기 (118666)
+- 출처 : 프로그래머스
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/118666
+
+### 2. 랜덤 유형
+
+- 문제정보 :  코딩 테스트 공부 (118668)
+- 출처 : 프로그래머스
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/118668
+
+### 3. 랜덤 유형
+
+- 문제정보 : 등산코스 정하기 (118669)
+- 출처 : 프로그래머스
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/118669
