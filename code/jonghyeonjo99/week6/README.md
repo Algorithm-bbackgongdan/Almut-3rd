@@ -71,13 +71,59 @@ def solution(survey, choices):
 ## 접근
 
 ## 문제 회고
-# 1234 : ABCD
+
+# prog_118669 : 등산경로 정하기
 ### code
 ```python
+import heapq
+from math import inf
 
+def solution(n, paths, gates, summits):
+    # 간선 정리 (양방향)
+    graph = [[] for _ in range(n + 1)]
+    for i, j, w in paths:
+        graph[i].append([j, w])
+        graph[j].append([i, w])
+
+    # 산봉우리 판별
+    is_summit = [False] * (n + 1)
+    for summit in summits:
+        is_summit[summit] = True
+
+    # gates 모두 시작 위치
+    distance = [inf] * (n + 1)
+    queue = []
+    for gate in gates:
+        distance[gate] = 0
+        heapq.heappush(queue, [0, gate])
+
+    # 다익스트라
+    while queue:
+        d, i = heapq.heappop(queue)
+        # 산봉우리면 바로 continue
+        # 이렇게 해야 두 개 이상의 산봉우리를 방문하지 않는다.
+        if distance[i] < d or is_summit[i]:
+            continue
+        for j, dd in graph[i]:
+            dd = max(distance[i], dd)
+            if distance[j] > dd:
+                distance[j] = dd
+                heapq.heappush(queue, [dd, j])
+
+    result = [-1, inf]
+    for summit in sorted(summits):
+        if distance[summit] < result[1]:
+            result[0] = summit
+            result[1] = distance[summit]
+    return result
   ```
 ## 결과
-
+### 실패 후 참조
 ## 접근
+출입구에서 산봉우리까지의 등산코스를 그대로 돌아오면 되기 때문에 산봉우리까지 편도만 생각하여도 무방.
 
+산봉우리와 출입구를 중복하여 지나지않기 위해 산봉우리 판별과 각각의 출입구를 거리 0으로 초기화하여 queue에 push해준다.
+
+다익스트라로 각 위치에 도달하기 위한 최소 가중치를 업데이트해준다.
 ## 문제 회고
+노드를 출입구, 산봉우리로 구분하여 다익스트라를 구현하는 것이 굉장히 어려웠다. 이 문제처럼 기준값이 경로 내 가중치 합이 아닌 응용된 다익스트라를 풀기 위해서 더 공부해야겠다..
