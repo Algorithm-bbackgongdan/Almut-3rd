@@ -119,13 +119,13 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅    | ✅    | ✅    | ✅    | 😥    |       |       |
-| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅    | ✅    | ✅    | 😥    | 😥    |       |       |
-| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    |       |       |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    |       |       |
-| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    |       |       |
-| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅    | ✅    | 😥    | ✅    | 😥    |       |       |
-| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅    | ✅    | ✅    | ✅    | 😥    |       |       |
+| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅    | ✅    | ✅    | ✅    | 😥    | ✅     |       |
+| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅    | ✅    | ✅    | 😥    | 😥    | 😥     |       |
+| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅     |       |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | 😥     |       |
+| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅     |       |
+| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅    | ✅    | 😥    | ✅    | 😥    | 😥     |       |
+| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅    | ✅    | ✅    | ✅    | 😥    | 😥     |       |
 
 # 커리큘럼
 
@@ -278,3 +278,25 @@ code
 - 문제정보 : 퍼즐 조각 채우기
 - 출처 : 프로그래머스
 - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/84021
+
+## Week 8
+
+- 총무 : [seungwookim99](https://github.com/seungwooKim99)
+
+### 1. 랜덤 유형
+
+- 문제정보 : 베스트앨범(42579)
+- 출처 : 프로그래머스
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42579
+
+### 2. 랜덤 유형
+
+- 문제정보 : 디스크 컨트롤러(42627)
+- 출처 : 프로그래머스
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42627
+
+### 3. 랜덤 유형
+
+- 문제정보 : 단체사진 찍기(1835)
+- 출처 : 프로그래머스 (2017 카카오코드 본선)
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/1835
