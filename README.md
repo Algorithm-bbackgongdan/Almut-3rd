@@ -300,3 +300,9 @@ code
 - 문제정보 : 단체사진 찍기(1835)
 - 출처 : 프로그래머스 (2017 카카오코드 본선)
 - 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/1835
+
+### 4. 랜덤 유형 (3번 대체 문제)
+
+- 문제정보 : 행렬 테두리 회전하기(77485)
+- 출처 : 프로그래머스 (2021 Dev-Matching)
+- 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/77485
