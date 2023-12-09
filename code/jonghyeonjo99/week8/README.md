@@ -44,25 +44,64 @@ def solution(genres, plays):
 딕셔너리 구조를 사용해본 경험이 많이 없어서 장르를 처리할 때 많이 헤맸다.
 2가지 이상의 조건으로 데이터를 정렬하는 법을 배울 수 있었다.
 
-# 1234 : ABCD
+# prog_42627 : 디스크컨트롤러
 ### code
 ```python
 
   ```
 ## 결과
-
+### 고민 중입니다,,
 ## 접근
 
 ## 문제 회고
 
 
-# 1234 : ABCD
+# prog_77485 : 행렬 테두리 회전하기
 ### code
 ```python
+def solution(rows, columns, queries):
+    answer = []
+    arr = [[0 for _ in range(columns)] for _ in range(rows)]
+    num = 1
 
+    for i in range(rows):
+        for j in range(columns):
+            arr[i][j] = num
+            num += 1
+
+    for start_x, start_y, end_x, end_y in queries:
+        min_num = arr[start_x-1][start_y-1]
+
+        #위쪽 테두리
+        for i in range(end_y-1,start_y,-1):
+            arr[start_x-1][i] = arr[start_x-1][i-1]
+            min_num = min(min_num, arr[start_x-1][i])
+
+        #우측 테두리
+        for i in range(end_x-1,start_x,-1):
+            arr[i][end_y-1] = arr[i-1][end_y-1]
+            min_num = min(min_num, arr[i][end_y-1])
+
+        #아래 테두리
+        for i in range(start_y,end_y):
+            arr[end_x-1][i-1] = arr[end_x-1][i]
+            min_num = min(min_num, arr[end_x-1][i])
+
+        #좌측 테두리
+        for i in range(start_x,end_x):
+            arr[i-1][start_y-1] = arr[i][start_y-1]
+            min_num = min(min_num, arr[i][start_y-1])
+
+        answer.append(min_num)
+    return answer
   ```
 ## 결과
-
+### 실패
 ## 접근
-
+완전탐색하여 문제가 시키는대로 시계방향으로 숫자를 돌리기로 하였다.
 ## 문제 회고
+숫자가 시계방향으로 돌기 때문에 숫자의 이동을 시계반대방향부터 처리해주어야한다.
+그렇지 않으면 각 테두리의 맨 앞의 숫자가 계속해서 이동하는 결과가 발생한다.
+그래서 시계반대방향으로 숫자의 이동을 처리하였는데 틀렸다..
+
+코드 중간에 실수가 있는 것 같은데, 나중에 천천히 복기해봐야겠다ㅠ
