@@ -119,13 +119,13 @@ code
 
 | 멤버                                              | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 |
 | ------------------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅    | ✅    | ✅    | ✅    | 😥    | ✅     |       |
-| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅    | ✅    | ✅    | 😥    | 😥    | 😥     |       |
-| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅     |       |
-| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | 😥     |       |
-| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅     |       |
-| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅    | ✅    | 😥    | ✅    | 😥    | 😥     |       |
-| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅    | ✅    | ✅    | ✅    | 😥    | 😥     |       |
+| [seungwookim99](https://github.com/seungwooKim99) | ✅    | ✅    | ✅    | ✅    | ✅    | 😥    | ✅     | ✅     |
+| [kauthenticity](https://github.com/kauthenticity) | ✅    | ✅    | ✅    | ✅    | 😥    | 😥    | 😥     | ✅     |
+| [SungHo-Ck](https://github.com/SungHo-Ck)         | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅     | 😥     |
+| [jonghyeonjo99](https://github.com/jonghyeonjo99) | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | 😥     | ✅     |
+| [itsnowkim](https://github.com/itsnowkim)         | ✅    | ✅    | ✅    | ✅    | ✅    | ✅    | ✅     | ✅     |
+| [itsme-shawn](https://github.com/itsme-shawn)     | 😥    | ✅    | ✅    | 😥    | ✅    | 😥    | 😥     | 😥     |
+| [siwonblue](https://github.com/siwonblue)         | ✅    | ✅    | ✅    | ✅    | ✅    | 😥    | 😥     | 😥     |
 
 # 커리큘럼
 
